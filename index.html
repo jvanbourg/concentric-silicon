@@ -25,17 +25,19 @@
         }
 
         .logo {
-            /* This is the Goldilocks zone: 50% of the screen width */
-            width: 50%; 
-            max-width: 600px; /* Prevents it from getting too huge on 4K monitors */
+            /* Increased from 50% to 80% */
+            width: 80%; 
+            /* Increased from 600px to 1200px to allow it to grow on desktops */
+            max-width: 1200px; 
             height: auto;
             display: block;
         }
 
-        /* Responsive tweak for phones so it stays visible */
+        /* Mobile remains at 80% but has no large pixel cap */
         @media (max-width: 600px) {
             .logo {
-                width: 80%; 
+                width: 90%; 
+                max-width: none;
             }
         }
     </style>
