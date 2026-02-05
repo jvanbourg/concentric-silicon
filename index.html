@@ -2,14 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concentric Silicon</title>
     <link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            background-color: #000; /* Keeps the background black */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Prevents scrollbars if the image gets too big */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            /* This is the 2x zoom magic */
+            transform: scale(2.0); 
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Mobile adjustment so it doesn't cut off on phones */
+        @media (max-width: 600px) {
+            .logo {
+                transform: scale(1.2); /* Scales it less on small screens */
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <img src="assets/landing.jpg" alt="Concentric Ltd. Logo" class="logo">
+        <img src="assets/landing.jpg" alt="Concentric Silicon Logo" class="logo">
     </div>
 </body>
 </html>
